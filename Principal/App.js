@@ -45,7 +45,7 @@ function RegsScreen({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
-  const baseUrl = 'http://localhost/phpBase2022';
+  const baseUrl = 'http://localhost/phpBase-main';
 
 
   useEffect(() => {
@@ -58,9 +58,11 @@ function RegsScreen({ navigation }) {
      const json = await response.json();
      setData(json);
      console.log(json)
-   } catch (error) {
+   } 
+   catch (error) {
      console.error(error);
-   } finally {
+   } 
+   finally {
      setLoading(false);
    }
  }
